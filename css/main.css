@@ -17,5 +17,17 @@ aside{
   display: grid;
   grid-template-columns: auto 40px;
   padding: 2em;
-  
+}
+
+#menu{
+  cursor: pointer;
+}
+
+figure{
+  margin: 0;
+}
+
+figcaption{
+  font-size: 1.3em;
+  font-weight: bold;
 }
