@@ -6,3 +6,8 @@
          e.preventDefault();
     });
 })();
+
+function toggleMenu(){
+    console.log("merge");
+    document.querySelector('ul').classList.toggle('active');
+}
