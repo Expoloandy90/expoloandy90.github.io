@@ -7,7 +7,7 @@ body {
   background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
-  font-family: 'Major Mono Display', monospace;
+  /* font-family: 'Major Mono Display', monospace; */
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -19,7 +19,7 @@ aside{
   padding: 2em;
 }
 
-#menu{
+i{
   cursor: pointer;
 }
 
@@ -30,4 +30,108 @@ figure{
 figcaption{
   font-size: 1.3em;
   font-weight: bold;
+  font-family: 'Major Mono Display', monospace;
+}
+
+ul{
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8em;
+  display: block;
+  padding: 1.5em;
+  background-color: rgba(255, 255, 255, 35);
+  color: #000000; 
+}
+
+main{
+  background: white;
+  padding: 1em 1.4em; 
+}
+
+h1{
+  margin: 0;
+}
+
+p{
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.cta{
+  display: block;
+  color: white;
+  background: #0e7fff;
+  text-decoration: none;
+  padding: 8px 50px;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 2em 0;
+}
+
+@media only screen and (min-width: 768px){
+
+  body{
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 2em;
+  }
+
+  i{
+    visibility: hidden;
+  }
+
+  aside{
+    background: #dce1f6;
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto;
+    padding: 0;
+  }
+
+  main{
+    padding: 4em; 
+  }
+
+  #avatar{
+    border-radius: 50%;
+    background: #ffffff;
+    width: 50px;
+    height: 50px;
+    margin: 2em auto 1em auto;
+  }
+
+  figcaption{
+    text-align: center;
+    color: #000000;
+  }
+
+  ul{
+    display: block;
+    margin-top: 2em;
+    position: relative !important;
+    background: none !important;
+    width: 100% !important;
+  }
+
+  ul li a:hover{
+    background-color: #fafafa;
+  }
+
+  nav{
+    background: none;
+  }
+
+  .cta{
+    display: inline-block;
+    font-size: 1.3em;
+    padding: .8em 3em;
+  }
 }
