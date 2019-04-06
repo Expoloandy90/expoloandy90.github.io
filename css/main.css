@@ -9,6 +9,12 @@ html {
   background-attachment: fixed;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 aside{
   color: #ffffff;
   display: grid;
@@ -90,6 +96,8 @@ p{
     display: grid;
     grid-template-columns: 20% auto;
     padding: 2em;
+    max-width: 70%;
+    margin: auto;
   }
 
   i{
