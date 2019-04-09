@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html lang="ro">
-
-<head>
-
-</head>
-
+<html>
 <body>
+
+<h2>Store and retrieve data from local storage.</h2>
+
+<p id="demo"></p>
+
+<script>
+    // Create a request variable and assign a new XMLHttpRequest object to it.
+    var request = new XMLHttpRequest()
+
+    // Open a new connection, using the GET request on the URL endpoint
+    request.open('GET', 'https://api.exchangeratesapi.io/latest', true)
+
+    request.onload = function () {
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response);
+        console.log(data.base);
+        console.log(data.rates.lenght);
+    }
+
     
-    <p>ceva</p>
+
+
+
+    // Send request
+    request.send()
+
+</script>
+
 </body>
 </html>
