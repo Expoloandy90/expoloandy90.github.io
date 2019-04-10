@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="ro">
 
-<!-- 
-    RON - Lei
-    USB - Dollar
-    EUR - Euro
-    RUB - Russia Ruble
-    CAD - Canadian Dollar
-    JPY - Japanese Yen
-    CHF - Liechtenstein Currency
-    TRY - Turkey
-    HRK - Croatian kuna
-    NOK - Norwegian krone
-    DKK - Danish krone
-    CZK - Czech koruna
-    HUF - Hungarian forint
-    GBP - Pound sterling UK
-    ISK - Icelandic króna: second króna
-    PLN - Polish złoty
-    SEK - Swedish krona
+<!-- Api pentru valuare: https://exchangeratesapi.io/
+    Features:
+    - Imagini ale bancnotelor
+    - lista cu preturi
+    - convertor 
 -->
 
-<h2>Store and retrieve data from local storage.</h2>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Schimb valutar</title>
+    <link rel="stylesheet" href="css/google-icons-proprieties.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/main2.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="javascript/menu.js">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-<p id="demo"></p>
+<body>
+    
+    <h1 style="text-align:center">Schimb Valutar</h1>
 
-<script>
-    // Create a request variable and assign a new XMLHttpRequest object to it.
-    var request = new XMLHttpRequest()
+    <div class="navbar">
+        <a href="#">Acasa</a>
+        <a href="#">Lista</a>
+        <a href="#">Schimb valuta</a>
+        <a href="#">Info</a>
+    </div>
 
-    // Open a new connection, using the GET request on the URL endpoint
-    request.open('GET', 'https://api.exchangeratesapi.io/latest', true)
-
-    request.onload = function () {
-    // Begin accessing JSON data here
-    var data = JSON.parse(this.response);
-        console.log(data.base);
-        console.log(data.rates.RON);
-    }
-    // Send request
-    request.send()
-
-</script>
-
+    <div class="content">
+        <table>
+            <tr>
+                <th>Moneda</th>
+                <th>Pret</th>
+            </tr>
+            <tr>
+                <th>RON</th>
+                <th>4.72</th>
+            </tr>
+            <tr>
+                <th>USD</th>
+                <th>2.25</th>
+            </tr>
+        </table>
+    </div>
+    
 </body>
+
 </html>
