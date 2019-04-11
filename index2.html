@@ -6,6 +6,9 @@
     - Imagini ale bancnotelor
     - lista cu preturi
     - convertor 
+
+    Locatia
+    file:///D:/Programing/WEB%20DEVELOPMENT/JavaScript/expoloandy90.github.io/index2.html
 -->
 
 <head>
@@ -34,22 +37,42 @@
     </div>
 
     <div class="content">
-        <table>
+        <table id="myTable">
             <tr>
                 <th>Moneda</th>
                 <th>Pret</th>
             </tr>
-            <tr>
-                <th>RON</th>
-                <th>4.72</th>
-            </tr>
-            <tr>
-                <th>USD</th>
-                <th>2.25</th>
-            </tr>
         </table>
     </div>
     
+    <script>
+        // Create a request variable and assign a new XMLHttpRequest object to it.
+        var request = new XMLHttpRequest()
+        var table = document.getElementById("myTable");
+        var currentcy = ["RON", "USD", "BGN", "RUB", "CAD", "JPY", "CHF", "TRY", "HRK", "NOK", "DKK", "CZK", "HUF", "GBP", "ISK", "PLN", "SEK"];
+
+        // Open a new connection, using the GET request on the URL endpoint
+        request.open('GET', 'https://api.exchangeratesapi.io/latest?base=EUR', true)
+
+        request.onload = function () {
+            // Begin accessing JSON data here
+            var data = JSON.parse(this.response);
+            var table = document.getElementById("myTable");
+            for(var i=0; i<currentcy.length; i++){
+                var row = table.insertRow(table.rows.length);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = currentcy[i];
+                cell2.innerHTML = data.rates[currentcy[i]];
+            }
+            
+            console.log(data.base);
+            console.log(data.rates.RON);
+        }
+        // Send request
+        request.send();
+
+    </script>
 </body>
 
 </html>
