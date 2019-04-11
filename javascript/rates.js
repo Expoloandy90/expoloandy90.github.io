@@ -3,6 +3,7 @@ var table = document.getElementById("myTable");
 var currentcy = ["RON", "EUR", "USD", "BGN", "GBP", "RUB", "CAD", "JPY", "CHF", "TRY", "HRK", "NOK", "DKK", "CZK", "HUF", "ISK", "PLN", "SEK"];
 var base = "EUR";
 var data;
+var url ="https://api.exchangeratesapi.io/";
 
 var xmlhttp = new XMLHttpRequest();
 
@@ -24,7 +25,7 @@ xmlhttp.onreadystatechange = function () {
         //O functie care returneaza data de ieri in format 2019-04-11
     }
 };
-xmlhttp.open("GET", 'https://api.exchangeratesapi.io/latest?base=' + base, true);
+xmlhttp.open("GET", url + 'latest?base=' + base, true);
 xmlhttp.send();
 
 var yesterday = function (date1) {
