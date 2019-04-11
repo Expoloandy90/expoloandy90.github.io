@@ -48,12 +48,11 @@ table{
 }
 
 td, th {
-    /* border: 1px solid #dddddd; */
     text-align: center;
     padding: 8px;
+    border-radius: 25px;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-
