@@ -1,7 +1,5 @@
 
 var table = document.getElementById("myTable");
-var currentcy = ["RON", "EUR", "USD", "BGN", "GBP", "RUB", "CAD", "JPY", "CHF", "TRY", "HRK", "NOK", "DKK", "CZK", "HUF", "ISK", "PLN", "SEK"];
-var base = "EUR";
 var url = "https://api.exchangeratesapi.io/";
 
 var xmlhttp = new XMLHttpRequest();

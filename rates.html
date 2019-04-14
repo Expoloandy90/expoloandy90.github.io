@@ -29,22 +29,19 @@
 
     <h1 style="text-align:center">Schimb Valutar</h1>
 
-    <div>
-        <div class="dropdown">
-            <a class="dropbtn">EUR</a>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-    </div>
-
     <div class="navbar">
         <a href="index.html">Acasa</a>
         <a href="#">Curs valutar</a>
         <a href="#">Schimb valuta</a>
         <a href="index2.html">Info</a>
+    </div>
+
+    <div class="navbar">
+        <form id="baseSelector">
+            <select id="baseMenu"
+                onChange="setBase(document.getElementById('baseMenu').selectedIndex)">
+            </select>
+        </form>
     </div>
 
     <div class="content">
@@ -57,6 +54,7 @@
         </table>
     </div>
 
+    <script src="javascript/baseCurrency.js"></script>
     <script src="javascript/rates.js"></script>
 </body>
 
