@@ -27,28 +27,26 @@ var compareValues = function (today) {
             var yesterdayData = JSON.parse(this.responseText);
             var table = document.getElementById("myTable");
             for (var i = 0; i < currentcy.length; i++) {
-                if (currentcy[i] != "EUR") {
-                    var row = table.insertRow(table.rows.length);
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    var cell3 = row.insertCell(2);
-                    cell1.innerHTML = currentcy[i];
+                var row = table.insertRow(table.rows.length);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                cell1.innerHTML = currentcy[i];
+                if (today.rates[currentcy[i]] != undefined)
                     cell2.innerHTML = today.rates[currentcy[i]];
-                    if (today.rates[currentcy[i]] > yesterdayData.rates[currentcy[i]]) {
-                        cell2.style.color = "green";
-                        cell3.style.color = "green";
-                        cell3.innerHTML = "&#8599;";
-                    }
-                    else if (today.rates[currentcy[i]] < yesterdayData.rates[currentcy[i]]) {
-                        cell2.style.color = "red";
-                        cell3.style.color = "red";
-                        cell3.innerHTML = "&#8600;";
-                    }
-                    else if (today.rates[currentcy[i]] == yesterdayData.rates[currentcy[i]]) {
-                        cell3.innerHTML = "-";
-                    }
-
-
+                else cell2.innerHTML = 1;
+                if (today.rates[currentcy[i]] > yesterdayData.rates[currentcy[i]]) {
+                    cell2.style.color = "green";
+                    cell3.style.color = "green";
+                    cell3.innerHTML = "&#8599;";
+                }
+                else if (today.rates[currentcy[i]] < yesterdayData.rates[currentcy[i]]) {
+                    cell2.style.color = "red";
+                    cell3.style.color = "red";
+                    cell3.innerHTML = "&#8600;";
+                }
+                else if (today.rates[currentcy[i]] == yesterdayData.rates[currentcy[i]]) {
+                    cell3.innerHTML = "-";
                 }
             }
             //Urmeaza sa fac o functie care arata cum a evoluat pretul de ieri pana azi
