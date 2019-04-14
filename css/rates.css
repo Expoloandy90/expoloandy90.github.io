@@ -52,6 +52,14 @@ td, th {
     padding: 8px;
     border-radius: 25px;
 }
+
+th{
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
   
 .dropdown {
     position: relative;

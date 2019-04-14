@@ -35,11 +35,22 @@ var compareValues = function (today) {
                     var cell2 = row.insertCell(1);
                     var cell3 = row.insertCell(2);
                     cell1.innerHTML = currentcy[i];
-                    cell2.innerHTML = yesterdayData.rates[currentcy[i]];
-                    if(today.rates[currentcy[i]] > yesterdayData.rates[currentcy[i]])
+                    cell2.innerHTML = today.rates[currentcy[i]];
+                    if (today.rates[currentcy[i]] > yesterdayData.rates[currentcy[i]]) {
                         cell2.style.color = "green";
-                    else if(today.rates[currentcy[i]] < yesterdayData.rates[currentcy[i]])
-                            cell2.style.color = "red";
+                        cell3.style.color = "green";
+                        cell3.innerHTML = "&#8599;";
+                    }
+                    else if (today.rates[currentcy[i]] < yesterdayData.rates[currentcy[i]]) {
+                        cell2.style.color = "red";
+                        cell3.style.color = "red";
+                        cell3.innerHTML = "&#8600;";
+                    }
+                    else if (today.rates[currentcy[i]] == yesterdayData.rates[currentcy[i]]) {
+                        cell3.innerHTML = "-";
+                    }
+
+
                 }
             }
             //Urmeaza sa fac o functie care arata cum a evoluat pretul de ieri pana azi
