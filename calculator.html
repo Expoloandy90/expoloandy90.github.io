@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/google-icons-proprieties.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/rates.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -29,15 +28,18 @@
 
     <h1 style="text-align:center">Schimb Valutar</h1>
 
+
+
     <div class="navbar">
         <a href="index.html">Acasa</a>
         <a href="rates.html">Curs valutar</a>
         <a href="calculator.html">Schimb valuta</a>
         <a href="graph.html">Evolutia</a>
         <a href="index2.html">Info</a>
+        
     </div>
 
-    <div class="navbar">
+    <div class="selector">
         <form id="baseSelector">
             <select id="baseMenu"
                 onChange="setBase(document.getElementById('baseMenu').selectedIndex)">
@@ -46,17 +48,11 @@
     </div>
 
     <div class="content">
-        <table id="myTable">
-            <tr>
-                <th>Moneda</th>
-                <th>Pret</th>
-                <th></th>
-            </tr>
-        </table>
+        <h2>Bun venit!</h2>
+        <p>Aici poti afla ultimul pret al valutelor europene</p>
     </div>
 
     <script src="javascript/baseCurrency.js"></script>
-    <script src="javascript/rates.js"></script>
 </body>
 
 </html>

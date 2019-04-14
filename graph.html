@@ -21,13 +21,16 @@
     <link rel="stylesheet" href="css/google-icons-proprieties.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/rates.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="javascript/graph.js"></script>
 </head>
 
 <body>
 
     <h1 style="text-align:center">Schimb Valutar</h1>
+
+
 
     <div class="navbar">
         <a href="index.html">Acasa</a>
@@ -35,28 +38,22 @@
         <a href="calculator.html">Schimb valuta</a>
         <a href="graph.html">Evolutia</a>
         <a href="index2.html">Info</a>
+
     </div>
 
-    <div class="navbar">
+    <div class="selector">
         <form id="baseSelector">
-            <select id="baseMenu"
-                onChange="setBase(document.getElementById('baseMenu').selectedIndex)">
+            <select id="baseMenu" onChange="setBase(document.getElementById('baseMenu').selectedIndex)">
             </select>
         </form>
     </div>
 
     <div class="content">
-        <table id="myTable">
-            <tr>
-                <th>Moneda</th>
-                <th>Pret</th>
-                <th></th>
-            </tr>
-        </table>
+        <div id="chartContainer" style="height: 400px; width:100%;"></div>
     </div>
 
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="javascript/baseCurrency.js"></script>
-    <script src="javascript/rates.js"></script>
 </body>
 
 </html>
