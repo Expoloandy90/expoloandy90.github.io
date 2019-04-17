@@ -1,10 +1,18 @@
+var url = "https://api.exchangeratesapi.io/";
+
+var data;
 
 window.onload = function () {
+
+    data = getData('https://api.exchangeratesapi.io/latest?base=EUR');
+
+    var today = data.date;
+    console.log(today);
 
     var dps = []; // dataPoints
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
-            text: "Dynamic Data"
+            text: base + '/' + "RON"
         },
         axisY: {
             includeZero: false
@@ -15,32 +23,55 @@ window.onload = function () {
         }]
     });
 
-    var xVal = 0;
-    var yVal = 100;
-    var updateInterval = 1000;
-    var dataLength = 20; // number of dataPoints visible at any point
+    var xVal = 1;
+    var yVal;
+    var dataLength = 12; // number of dataPoints visible at any point
 
-    var updateChart = function (count) {
+    for (var j = 0; j < dataLength; j++) {
+        var anotherDate = lastMounth(today, 11 - j).getFullYear() + '-' + lastMounth(today, 11 - j).getMonth() + '-' + lastMounth(today, 11 - j).getDate();
+        console.log(anotherDate);
+        data = getData('https://api.exchangeratesapi.io/' + anotherDate +  '?base=' + base);
+        yVal = data.rates["RON"];
+        // xVal = 1;
+        // console.log('xVal ' + xVal);
+        dps.push({
+            x: xVal,
+            y: yVal
+        });
+        xVal++;
+    }
 
-        count = count || 1;
+    if (dps.length > dataLength) {
+        dps.shift();
+    }
 
-        for (var j = 0; j < count; j++) {
-            yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-            dps.push({
-                x: xVal,
-                y: yVal
-            });
-            xVal++;
-        }
+    chart.render();
 
-        if (dps.length > dataLength) {
-            dps.shift();
-        }
+}
 
-        chart.render();
-    };
+var getData = function (url) {
+    var resp;
+    var xmlHttp;
 
-    updateChart(dataLength);
-    setInterval(function () { updateChart() }, updateInterval);
+    resp = '';
+    xmlHttp = new XMLHttpRequest();
 
+    if (xmlHttp != null) {
+        xmlHttp.open("GET", url, false);
+        xmlHttp.send(null);
+        resp = xmlHttp.responseText;
+    }
+
+    return JSON.parse(resp);
+}
+
+var lastMounth = function (date1, count) {
+    var dt = new Date(date1);
+    if(dt.getMonth() - count != 0)
+        return new Date((dt.setMonth(dt.getMonth() - count)));
+    else {
+        dt.setFullYear(dt.getFullYear() - 1);
+        dt.setMonth(11);
+        return dt;
+    } 
 }
