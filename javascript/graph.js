@@ -72,6 +72,7 @@ var lastMounth = function (date1, count) {
     else {
         dt.setFullYear(dt.getFullYear() - 1);
         dt.setMonth(11);
+        dt.setDate(30);
         return dt;
     } 
 }
