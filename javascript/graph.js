@@ -11,7 +11,7 @@ window.onload = function () {
 
     document.getElementById("title").innerHTML = base + '/' + graphBase + " în ultimele 12 luni";
 
-    data = getData('https://api.exchangeratesapi.io/latest?base=EUR');
+    data = getData('https://api.exchangeratesapi.io/latest?base=' + base);
 
     var today = data.date;
     console.log(today);
