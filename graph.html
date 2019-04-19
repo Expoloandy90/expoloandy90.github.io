@@ -30,12 +30,10 @@
 
     <h1 style="text-align:center">Schimb Valutar</h1>
 
-
-
     <div class="navbar">
         <a href="index.html">Acasa</a>
         <a href="rates.html">Curs valutar</a>
-        <a href="calculator.html">Schimb valuta</a>
+        <a href="calculator.html">Calculator</a>
         <a href="graph.html">Evolutia</a>
         <a href="index2.html">Info</a>
 
@@ -49,6 +47,14 @@
     </div>
 
     <div class="content">
+        <h3 style="text-align:center" id="title">LOADING...</h3>
+        <div class="selector">
+                <form id="baseSelector2">
+                    Alege moneda:
+                    <select id="baseMenu2" onChange="setBase2(document.getElementById('baseMenu2').selectedIndex)">
+                    </select>
+                </form>
+            </div>
         <div id="chartContainer" style="height: 400px; width:100%;"></div>
     </div>
 

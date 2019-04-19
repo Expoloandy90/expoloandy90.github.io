@@ -1,8 +1,15 @@
 var url = "https://api.exchangeratesapi.io/";
 
 var data;
+var graphBase;
 
 window.onload = function () {
+
+    document.getElementsByClassName("content").innerHTML = "LOADING";
+
+    initializeGraphSelector();
+
+    document.getElementById("title").innerHTML = base + '/' + graphBase + " în ultimele 12 luni";
 
     data = getData('https://api.exchangeratesapi.io/latest?base=EUR');
 
@@ -12,7 +19,7 @@ window.onload = function () {
     var dps = []; // dataPoints
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
-            text: base + '/' + "RON"
+            text: base + '/' + graphBase
         },
         axisY: {
             includeZero: false
@@ -31,7 +38,7 @@ window.onload = function () {
         var anotherDate = lastMounth(today, 11 - j).getFullYear() + '-' + lastMounth(today, 11 - j).getMonth() + '-' + lastMounth(today, 11 - j).getDate();
         console.log(anotherDate);
         data = getData('https://api.exchangeratesapi.io/' + anotherDate +  '?base=' + base);
-        yVal = data.rates["RON"];
+        yVal = data.rates[graphBase];
         // xVal = 1;
         // console.log('xVal ' + xVal);
         dps.push({
@@ -75,4 +82,29 @@ var lastMounth = function (date1, count) {
         dt.setDate(30);
         return dt;
     } 
+}
+
+var initializeGraphSelector = function(){
+    for(var i=0; i<currentcy.length; i++){
+        var option = document.createElement('option');
+        option.text = currentcy[i];
+        document.getElementById("baseMenu2").add(option);
+    }
+    
+    if(localStorage.graphBaseStorage){
+        graphBase = localStorage.graphBaseStorage;
+    }else{
+        localStorage.graphBaseStorage = "RON";
+    }
+    
+    for(var i=0; i<currentcy.length; i++){
+        if(currentcy[i] == graphBase)
+        document.getElementById("baseMenu2").selectedIndex = i;
+    }
+}
+
+function setBase2(selectedBase){
+    graphBase = currentcy[selectedBase];
+    localStorage.graphBaseStorage = graphBase;
+    location.reload();
 }
