@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/google-icons-proprieties.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calculator.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -47,7 +48,10 @@
     </div>
 
     <div class="content">
-        <input id="inputValue" type="number" value="1" oninput="valueCalculator()">
+        <div class="navbar">
+                <input id="inputValue" type="number" value="1" oninput="valueCalculator()">
+        </div>
+        
         <div class="selector">
             <form id="baseSelector2">
                 <select id="baseMenu2" onChange="setBase2(document.getElementById('baseMenu2').selectedIndex)">
