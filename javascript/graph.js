@@ -95,6 +95,7 @@ var initializeGraphSelector = function(){
         graphBase = localStorage.graphBaseStorage;
     }else{
         localStorage.graphBaseStorage = "RON";
+        graphBase = "RON";
     }
     
     for(var i=0; i<currentcy.length; i++){

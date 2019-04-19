@@ -49,6 +49,7 @@ var initializeCalculatorSelector = function(){
         calculatorBase = localStorage.calculatorBaseStorage;
     }else{
         localStorage.calculatorBaseStorage = "RON";
+        calculatorBase = "RON";
     }
     
     for(var i=0; i<currentcy.length; i++){
@@ -61,5 +62,4 @@ function setBase2(selectedBase){
     calculatorBase = currentcy[selectedBase];
     localStorage.calculatorBaseStorage = calculatorBase;
     valueCalculator();
-    //location.reload();
 }

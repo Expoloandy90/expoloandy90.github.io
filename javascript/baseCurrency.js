@@ -11,6 +11,7 @@ if(localStorage.baseStorage){
     base = localStorage.baseStorage;
 }else{
     localStorage.baseStorage = "EUR";
+    base = "EUR";
 }
 
 for(var i=0; i<currentcy.length; i++){
