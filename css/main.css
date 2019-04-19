@@ -1,5 +1,7 @@
 html{
-    background: #6495ed;
+    /* background: #6495ed; */
+    background: url('https://media.giphy.com/media/xT0xeAqBxu7wd3Ie0o/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
     font-family:'Montserrat', sans-serif;;
 }
 
