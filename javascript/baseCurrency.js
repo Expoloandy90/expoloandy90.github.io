@@ -1,5 +1,5 @@
 var base;
-var currentcy = ["EUR", "RON", "USD", "BGN", "RUB", "CAD", "JPY", "GBP", "CHF", "TRY", "HRK", "NOK", "DKK", "CZK", "HUF", "ISK", "PLN", "SEK"];
+var currentcy = ["EUR", "RON", "USD", "GBP", "RUB", "CAD", "JPY", "BGN", "CHF", "TRY", "HRK", "NOK", "DKK", "CZK", "HUF", "ISK", "PLN", "SEK"];
 
 for(var i=0; i<currentcy.length; i++){
     var option = document.createElement('option');
