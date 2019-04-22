@@ -9,7 +9,7 @@ window.onload = function () {
         value = -value;
         document.getElementById('inputValue').value = value;
     }
-    document.getElementById('result').innerHTML = value * data.rates[calculatorBase] + " " + base;
+    document.getElementById('result').innerHTML = value * data.rates[calculatorBase] + " " + calculatorBase;
 
 }
 
@@ -19,7 +19,7 @@ var valueCalculator = function(){
         value = -value;
         document.getElementById('inputValue').value = value;
     }
-    document.getElementById('result').innerHTML = value * data.rates[calculatorBase] + " " + base;
+    document.getElementById('result').innerHTML = value * data.rates[calculatorBase] + " " + calculatorBase;
 }
 
 var getData = function (url) {
