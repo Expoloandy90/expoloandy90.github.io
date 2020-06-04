@@ -1,0 +1,30 @@
+
+
+<span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> cat<!-- laglaglaglaglaglag --> About_Me
+Hi
+
+My name is Andrei Dragomir and I'm a 20 years old software developer from Romania.
+
+
+
+<span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> cat<!-- laglaglaglaglaglag --> Studies
+
+I am studying computer science at Babes-Bolyai University in Cluj.
+
+<span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> cd life/<!-- laglaglaglaglaglag -->hobbies
+
+One of my hobbies are taking photos and videos. You can check them on my gallery <a href="https://mywall-d25ab.web.app/">website</a>.
+
+<span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> cd work/<!-- laglaglaglaglaglag -->projects
+
+In hight school I created an web app for a project and because I was very into finance, stock, economy, crypto and so on I created an web app that simplify the way people calculate and exchange curencies.
+You can acces this project from here: <a href="exchange/index.html">Exchange rate website</a>
+
+<span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> ./contact<!-- laglaglaglaglaglag -->
+
+Email: <a id="cpyE" onclick="cpyEmail()">dragomirandy900@gmail.com</a>,
+Phone: <a id="cpyF" onclick="cpyPhone()">+40746813042</a>
+<a href="https://github.com/andr-drgm/">GitHub</a>
+
+<span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> exit<!-- laglaglaglaglaglag -->
+<p>Cheers!</p>
