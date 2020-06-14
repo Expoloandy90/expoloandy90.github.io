@@ -18,7 +18,7 @@ One of my hobbies are taking photos and videos. You can check them on my gallery
 <span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> cd work/<!-- laglaglaglaglaglag -->projects
 
 In hight school I created an web app for a project and because I was very into finance, stock, economy, crypto and so on I created an web app that simplify the way people calculate and exchange curencies.
-You can acces this project from here: <a href="exchange/index.html">Exchange rate website</a>
+You can acces this project from here: <a href="https://andr-drgm.github.io/exchange-rate/">Exchange rate website</a>
 
 <span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> ./contact<!-- laglaglaglaglaglag -->
 
