@@ -20,6 +20,8 @@ One of my hobbies are taking photos and videos. You can check them on my gallery
 In hight school I created an web app for a project and because I was very into finance, stock, economy, crypto and so on I created an web app that simplify the way people calculate and exchange curencies.
 You can acces this project from here: <a href="https://andr-drgm.github.io/exchange-rate/">Exchange rate website</a>
 
+Years ago I was confident that mobile is the future. It is why I was excited to learn Android development. I've created a variety of apps such as a wake on Lan app, currency transaction using blockchain, social media and a bitcoin tracker.
+
 <span id="a">andrei@dragomir</span>:<span id="b">~</span><span id="c">$</span> ./contact<!-- laglaglaglaglaglag -->
 
 Email: <a id="cpyE" onclick="cpyEmail()">dragomirandy900@gmail.com</a>,
